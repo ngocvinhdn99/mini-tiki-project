@@ -73,7 +73,7 @@ function Header() {
                          <div>
                             <div className="header-login">Đăng nhập/Đăng ký</div>
                             <div className="header-user">
-                                 Tài khoản 
+                                 Tài khoản Tiki Ngoc Vinh
                                  <ArrowDropDownIcon />
                             </div>
                          </div>
