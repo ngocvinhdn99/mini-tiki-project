@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
+import CartFeaTure from './components/Cart';
+import Header from './components/Header';
+import ProductFeature from './components/Product';
 
 function App() {
+  // const isShowUserForm = useSelector(state => state.user.showUserForm)
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+
+      {/* {isShowUserForm && <UserFeature />} */}
+      <Switch>
+          <Redirect from="/" to="/products" exact />
+
+          <Route path="/products" component={ProductFeature} />
+          <Route path="/cart" component={CartFeaTure} />
+      </Switch>
+
     </div>
   );
 }
